@@ -1,7 +1,7 @@
 # Unobot
 
 ## Vajalike lisade alla laadimine    
-Ava käsurida (<kbd>alt</kbd>+<kbd>F12</kbd>) või vali alt vasakult menüüst terminal.  
+Ava käsurida (<kbd>alt</kbd>+<kbd>F12</kbd> või vali alt vasakult menüüst terminal).  
 <img src="images/going_to_terminal.png" width=75% />
 
 Peale seda sisesta konsooli järgnev käsk, vajuta <kbd>Enter</kbd> ning oota kuni see lõpetab.  
@@ -11,9 +11,7 @@ pip install py-cord audioop-lts python-dotenv
 <img src="images/pip_install.png" width=50% />
 
 ## Tokeni lisamine  
-Ava main.py fail ning keri faili lõppu.
-Seal on järgnev rida: `bot.run("token")`
-Pane `token` asemel enda boti token (jutumärgid peavad alles jääma tokeni algusesse ja lõppu).  
+Ava või loo `.env` fail ning lisa `TOKEN=` lõppu enda discordi boti token.
 <img src="images/adding_bot_token.png" width=75% />
 
 ## Boti jooksutamine 🐍

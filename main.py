@@ -69,6 +69,6 @@ async def on_interaction(interaction: discord.Interaction):
 if __name__ == "__main__":
     config = dotenv_values(".env")
     token = config.get("TOKEN")
-    if token is None:
+    if token is None or not token:
         raise ValueError("loo fail nimega .env ja pane sinna TOKEN=isiklik Discord Developer Portal token")
     bot.run(token)
