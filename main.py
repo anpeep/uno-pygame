@@ -5,6 +5,8 @@ from discord.ext import commands
 
 from commands.game_ui import GameUi, GameView, UnoButtonView
 
+from dotenv import dotenv_values
+
 intents = discord.Intents.all()
 bot = commands.Bot(command_prefix="!", intents=intents)
 
@@ -64,4 +66,9 @@ async def on_interaction(interaction: discord.Interaction):
         return
 
 
-bot.run("token")
+if __name__ == "__main__":
+    config = dotenv_values(".env")
+    token = config.get("TOKEN")
+    if token is None:
+        raise ValueError("loo fail nimega .env ja pane sinna TOKEN=isiklik Discord Developer Portal token")
+    bot.run(token)

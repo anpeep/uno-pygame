@@ -9,6 +9,8 @@ from application.game_logic import GameLogic
 from application.types import GameCheat, error
 
 
+# TODO: fix win condition
+
 class UnoButtonView(discord.ui.View):
     def __init__(self, game_ui):
         super().__init__(timeout=None)
