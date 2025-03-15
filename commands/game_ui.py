@@ -9,8 +9,6 @@ from application.game_logic import GameLogic
 from application.types import GameCheat, error
 
 
-# TODO: fix win condition
-
 class UnoButtonView(discord.ui.View):
     def __init__(self, game_ui):
         super().__init__(timeout=None)
@@ -268,8 +266,7 @@ class GameUi:
             raise ValueError("Top card is null")
 
         card_label = GameUi.get_card_label(top_card)
-        await self.message.edit(components=[],
-                                content=f"🏆 {member.mention} has won the game!\n\n... by placing {card_label} as their last card.",
+        await self.message.edit(content=f"🏆 {member.mention} has won the game!\n\n... by placing {card_label} as their last card.",
                                 files=[])
 
         await asyncio.sleep(30)
